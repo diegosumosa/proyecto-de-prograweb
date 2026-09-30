@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesa de Ayuda - Atención y Cierre</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR GLOBAL -->
+  <header class="top-navbar">
+    <div class="nav-left">
+      <div class="brand">
+        <i class="fa-solid fa-headset"></i>
+        <span>Mesa de Ayuda</span>
+      </div>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Buscar por código de ticket - TCK-2026-...">
+      </div>
+    </div>
+    <div class="nav-right">
+      <button class="btn-nav-filter"><i class="fa-solid fa-user-check"></i> ASIGNADOS A MÍ <span class="badge-count">8</span></button>
+      <div class="user-profile">
+        <div class="user-info">
+          <span class="user-name">Julio Paredes Soto</span>
+          <span class="user-role">TÉCNICO</span>
+        </div>
+        <div class="user-avatar">JP</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    
+    <!-- BARRA LATERAL (SIDEBAR) -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <span class="sidebar-title">ATENCIÓN</span>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="Atención-Cierre.html"><i class="fa-solid fa-inbox"></i> Mi bandeja</a>
+            <span class="menu-badge">8</span>
+          </li>
+          <li class="active">
+            <a href="Atención-Cierre.html"><i class="fa-solid fa-spinner"></i> En atención</a>
+            <span class="menu-badge">3</span>
+          </li>
+          <li>
+            <a href="Atención-Cierre.html"><i class="fa-solid fa-clock"></i> En espera</a>
+            <span class="menu-badge">2</span>
+          </li>
+          <li>
+            <a href="Atención-Cierre.html"><i class="fa-solid fa-circle-check"></i> Resueltos hoy</a>
+            <span class="menu-badge">2</span>
+          </li>
+          <!-- ENLACE DIRECTO A Historial.html -->
+          <li>
+            <a href="Historial.html"><i class="fa-solid fa-history"></i> Historial</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-user"></i> Mi cuenta</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="#"><i class="fa-solid fa-user-gear"></i> Mi cuenta</a>
+        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+      <!-- =========================================================================
+           SECCIÓN 1 (Mockups 5.1 & 5.2): VISTA CONSOLIDADA DEL TICKET Y BITÁCORA
+           ========================================================================= -->
+      <section class="section-container" id="seccion-detalle">
+        <div class="section-header-tag">
+          <h2>5.1 Detalle del ticket — vista técnico · con 5.2 entrada de bitácora</h2>
+          <span class="role-badge role-tecnico">ROL: TÉCNICO</span>
+        </div>
+
+        <!-- Encabezado del Ticket -->
+        <div class="ticket-header-card">
+          <div class="ticket-title-area">
+            <div class="ticket-code-row">
+              <h1 class="ticket-id">TCK-2026-00147</h1>
+              <span class="status-tag tag-danger">Crítica</span>
+              <span class="status-tag tag-warning">En atención</span>
+              <span class="due-time"><i class="fa-regular fa-clock"></i> Vence en 1 h 42 min</span>
+            </div>
+            <h2 class="ticket-subject">Proyector no enciende en aula A-201 · Audiovisuales</h2>
+          </div>
+          <div class="ticket-actions">
+            <a href="#modal-cambiar-estado" class="btn btn-primary"><i class="fa-solid fa-rotate"></i> Cambiar estado</a>
+            <a href="#modal-cerrar-ticket" class="btn btn-outline"><i class="fa-solid fa-lock"></i> Cerrar ticket</a>
+            <a href="Historial.html" class="btn btn-outline"><i class="fa-solid fa-clock-rotate-left"></i> Historial</a>
+          </div>
+        </div>
+
+        <!-- Grid de Contenido Principal (Bitácora + Datos del Reporte) -->
+        <div class="ticket-grid">
+
+          <!-- Columna Izquierda: Bitácora de Tickets -->
+          <div class="bitacora-column">
+            <div class="card">
+              <div class="card-header flex-between">
+                <h3 class="card-title">Bitácora · 6 entradas</h3>
+                <div class="filter-dropdown">
+                  <label>Mostrar:</label>
+                  <select>
+                    <option>Todas</option>
+                    <option>Comentarios públicos</option>
+                    <option>Notas internas</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Listado de Entradas de Bitácora -->
+              <div class="bitacora-list">
+                
+                <div class="bitacora-item entry-public">
+                  <div class="avatar avatar-user">CQ</div>
+                  <div class="entry-content">
+                    <div class="entry-header">
+                      <div>
+                        <strong class="author-name">Camila Quispe Ramos</strong>
+                        <span class="author-role">Usuario</span>
+                        <span class="entry-date">• 07/09/2026 08:12</span>
+                      </div>
+                      <span class="badge-type badge-public">COMENTARIO PÚBLICO</span>
+                    </div>
+                    <p class="entry-text">El proyector enciende el foco pero la imagen no llega. Ya probé con dos laptops distintas y el mismo cable.</p>
+                  </div>
+                </div>
+
+                <div class="bitacora-item entry-public">
+                  <div class="avatar avatar-supervisor">LM</div>
+                  <div class="entry-content">
+                    <div class="entry-header">
+                      <div>
+                        <strong class="author-name">Lucía Mendoza Ríos</strong>
+                        <span class="author-role">Supervisor</span>
+                        <span class="entry-date">• 07/09/2026 08:20</span>
+                      </div>
+                      <span class="badge-type badge-public">COMENTARIO PÚBLICO</span>
+                    </div>
+                    <p class="entry-text">Asignado a Julio Paredes. Prioridad crítica: hay clase de 10:00 a 13:00 en el ambiente.</p>
+                  </div>
+                </div>
+
+                <div class="bitacora-item entry-internal">
+                  <div class="avatar avatar-tecnico">JP</div>
+                  <div class="entry-content">
+                    <div class="entry-header">
+                      <div>
+                        <strong class="author-name">Julio Paredes Soto</strong>
+                        <span class="author-role">Técnico</span>
+                        <span class="entry-date">• 07/09/2026 08:41</span>
+                      </div>
+                      <span class="badge-type badge-internal">NOTA INTERNA - NO VISIBLE PARA EL USUARIO</span>
+                    </div>
+                    <p class="entry-text">Nota interna: el HDMI de la mesa mide 0 V. Probable falla del extensor HDBaseT del rack del piso 2.</p>
+                  </div>
+                </div>
+
+                <div class="bitacora-item entry-public">
+                  <div class="avatar avatar-tecnico">JP</div>
+                  <div class="entry-content">
+                    <div class="entry-header">
+                      <div>
+                        <strong class="author-name">Julio Paredes Soto</strong>
+                        <span class="author-role">Técnico</span>
+                        <span class="entry-date">• 07/09/2026 09:05</span>
+                      </div>
+                      <span class="badge-type badge-public">COMENTARIO PÚBLICO</span>
+                    </div>
+                    <p class="entry-text">Subí al aula con un cable de reemplazo. La imagen vuelve con conexión directa; el problema está en el extensor.</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Formulario para Nueva Entrada -->
+              <div class="new-entry-box">
+                <div class="entry-tabs">
+                  <button class="tab-btn">Comentario público</button>
+                  <button class="tab-btn active-tab-internal">Nota interna</button>
+                  <span class="tab-hint">Estás escribiendo una nota interna: solo la ve el equipo técnico y el supervisor.</span>
+                </div>
+                <div class="entry-form-body">
+                  <textarea rows="3" placeholder="Escribe aquí el detalle de la nota interna...">Extensor HDBaseT del rack del piso 2 sin salida. Pedí repuesto al almacén con guía 4471.</textarea>
+                  <div class="entry-form-actions">
+                    <button class="btn btn-warning"><i class="fa-solid fa-floppy-disk"></i> Guardar nota interna</button>
+                    <button class="btn btn-secondary"><i class="fa-solid fa-paperclip"></i> Adjuntar foto</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Vista Consolidada -->
+          <div class="summary-column">
+            
+            <div class="card mb-16">
+              <h3 class="card-title-sm">Datos del reporte</h3>
+              <div class="data-group">
+                <div class="data-row">
+                  <span class="data-label">Solicitante:</span>
+                  <span class="data-value">Camila Quispe Ramos</span>
+                </div>
+                <div class="data-row">
+                  <span class="data-label">Teléfono:</span>
+                  <span class="data-value">987 654 321</span>
+                </div>
+                <div class="data-row">
+                  <span class="data-label">Subcategoría:</span>
+                  <span class="data-value">Proyector no enciende</span>
+                </div>
+                <div class="data-row">
+                  <span class="data-label">Registrado:</span>
+                  <span class="data-value">07/09/2026 08:12</span>
+                </div>
+              </div>
+              <div class="quote-box">
+                «El proyector enciende el foco pero la imagen no llega. Probé con dos laptops y el mismo cable HDMI de la mesa.»
+              </div>
+            </div>
+
+            <div class="card mb-16">
+              <h3 class="card-title-sm">Ambiente</h3>
+              <div class="ambiente-box">
+                <strong class="ambiente-code">A-201</strong>
+                <p class="ambiente-desc">Aula · Pabellón A · piso 2 · capacidad 60 · Campus Monterrico</p>
+                <span class="ambiente-stats"><i class="fa-solid fa-circle-info"></i> 2 tickets abiertos en este ambiente · último cierre 28/08/2026</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title-sm">Historial reciente</h3>
+              <div class="recent-history">
+                <p><strong>Abierto</strong> 08:12 → <strong>Asignado</strong> 08:20 → <strong>En atención</strong> 08:41 - 1 h 20 min transcurridos</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           SECCIÓN 2 (Mockups 5.3 & 5.4): MODALES DE CAMBIO DE ESTADO Y CIERRE
+           ========================================================================= -->
+      <section class="section-container" id="modales-demo">
+        <div class="section-header-tag">
+          <h2>5.3 Modal de cambio de estado · 5.4 Modal de cierre</h2>
+          <span class="role-badge role-modal">MODALES · SOLO TÉCNICO</span>
+        </div>
+
+        <div class="modals-preview-grid">
+
+          <!-- MODAL 5.3 -->
+          <div class="modal-card" id="modal-cambiar-estado">
+            <div class="modal-header">
+              <h3>Cambiar estado de TCK-2026-00147</h3>
+              <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p class="modal-subtext">Estado actual: <strong>En atención</strong>. Solo se ofrecen las transiciones permitidas.</p>
+
+              <div class="radio-group">
+                <label class="radio-card selected-orange">
+                  <input type="radio" name="nuevo_estado" checked>
+                  <div class="radio-label">
+                    <span class="radio-title">En espera · falta un repuesto o depende de un tercero</span>
+                  </div>
+                </label>
+
+                <label class="radio-card">
+                  <input type="radio" name="nuevo_estado">
+                  <div class="radio-label">
+                    <span class="radio-title">Resuelto · la falla ya no se presenta</span>
+                  </div>
+                </label>
+
+                <label class="radio-card disabled">
+                  <input type="radio" name="nuevo_estado" disabled>
+                  <div class="radio-label">
+                    <span class="radio-title">Abierto · no disponible desde En atención</span>
+                  </div>
+                </label>
+              </div>
+
+              <div class="form-row-2col mt-16">
+                <div class="form-group">
+                  <label>MOTIVO DE ESPERA (OBLIGATORIO)</label>
+                  <textarea rows="2">Repuesto solicitado al almacén con guía 4471.</textarea>
+                </div>
+                <div class="form-group">
+                  <label>FECHA ESTIMADA DE RETORNO</label>
+                  <input type="date" value="2026-09-09">
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-outline">Cancelar</button>
+              <button class="btn btn-navy">Guardar estado</button>
+            </div>
+          </div>
+
+          <!-- MODAL 5.4 -->
+          <div class="modal-card" id="modal-cerrar-ticket">
+            <div class="modal-header">
+              <h3>Cerrar TCK-2026-00147</h3>
+              <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+
+              <div class="form-group mb-16">
+                <label>SOLUCIÓN APLICADA (OBLIGATORIA)</label>
+                <textarea rows="3">Se reemplazó el extensor HDBaseT del rack del piso 2 y se verificó la proyección con dos laptops distintas.</textarea>
+              </div>
+
+              <div class="time-summary-grid">
+                <div class="time-card">
+                  <span class="time-label">TIEMPO TOTAL DE ATENCIÓN</span>
+                  <div class="time-value">3 h 24 min</div>
+                  <span class="time-status-ok"><i class="fa-solid fa-circle-check"></i> Dentro del tiempo esperado (8 h)</span>
+                </div>
+                <div class="time-card">
+                  <span class="time-label">ESTADO FINAL</span>
+                  <div class="final-badge-box">
+                    <span class="badge-cerrado">Cerrado</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-alert-box">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Al cerrar, <strong>Camila Quispe Ramos</strong> recibirá la encuesta de satisfacción y podrá reabrir el ticket dentro de 7 días.</span>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-outline">Cancelar</button>
+              <button class="btn btn-navy">Cerrar ticket</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="system-footer">
+    <span>Mesa de Ayuda de Servicios del Campus - Universidad de Lima</span>
+    <span>soporte.campus@ulima.edu.pe · anexo 30500 · Términos · Privacidad</span>
+  </footer>
+
+</body>
+</html>

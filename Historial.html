@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesa de Ayuda - Historial de Cambios</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR GLOBAL -->
+  <header class="top-navbar">
+    <div class="nav-left">
+      <div class="brand">
+        <i class="fa-solid fa-headset"></i>
+        <span>Mesa de Ayuda</span>
+      </div>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Buscar por código de ticket - TCK-2026-...">
+      </div>
+    </div>
+    <div class="nav-right">
+      <button class="btn-nav-filter"><i class="fa-solid fa-user-check"></i> ASIGNADOS A MÍ <span class="badge-count">8</span></button>
+      <div class="user-profile">
+        <div class="user-info">
+          <span class="user-name">Julio Paredes Soto</span>
+          <span class="user-role">TÉCNICO</span>
+        </div>
+        <div class="user-avatar">JP</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    
+    <!-- BARRA LATERAL (SIDEBAR) -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <span class="sidebar-title">ATENCIÓN</span>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="Atención-Cierre.html"><i class="fa-solid fa-inbox"></i> Mi bandeja</a>
+            <span class="menu-badge">8</span>
+          </li>
+          <li>
+            <a href="Atención-Cierre.html"><i class="fa-solid fa-spinner"></i> En atención</a>
+            <span class="menu-badge">3</span>
+          </li>
+          <li>
+            <a href="Atención-Cierre.html"><i class="fa-solid fa-clock"></i> En espera</a>
+            <span class="menu-badge">2</span>
+          </li>
+          <li>
+            <a href="Atención-Cierre.html"><i class="fa-solid fa-circle-check"></i> Resueltos hoy</a>
+            <span class="menu-badge">2</span>
+          </li>
+          <!-- MENÚ ACTIVO -->
+          <li class="active">
+            <a href="Historial.html"><i class="fa-solid fa-history"></i> Historial</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-user"></i> Mi cuenta</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="#"><i class="fa-solid fa-user-gear"></i> Mi cuenta</a>
+        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL: MOCKUP 5.5 HISTORIAL DE CAMBIOS -->
+    <main class="main-content">
+
+      <section class="section-container" id="seccion-historial">
+        <div class="section-header-tag">
+          <h2>5.5 Historial de cambios</h2>
+          <span class="role-badge role-tecnico">ROL: TÉCNICO</span>
+          <span class="header-note">Página completa · el supervisor ve la misma vista desde la cola</span>
+        </div>
+
+        <div class="history-sub-header">
+          <span class="breadcrumb"><a href="Atención-Cierre.html">Mi bandeja</a> › TCK-2026-00120 › Historial de cambios</span>
+          <h2>Historial de cambios</h2>
+          <p class="history-meta">Extensión eléctrica en mal estado · E-304 · cerrado el 01/09/2026 · Tiempo total 1 d 6 h 12 min</p>
+        </div>
+
+        <div class="history-layout-grid">
+          
+          <!-- Timeline Principal de Cambios -->
+          <div class="card">
+            <ul class="timeline">
+
+              <li class="timeline-item item-blue">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-title-row">
+                    <strong>Abierto</strong>
+                  </div>
+                  <div class="timeline-details">
+                    <span>31/08/2026 09:04 - Sofía Delgado Manrique (usuario) - prioridad inicial alta</span>
+                  </div>
+                  <span class="timeline-duration">Permaneció 46 min en este estado</span>
+                </div>
+              </li>
+
+              <li class="timeline-item item-blue">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-title-row">
+                    <strong>Asignado a Iván Zegarra Pinto</strong>
+                  </div>
+                  <div class="timeline-details">
+                    <span>31/08/2026 09:50 - Lucía Mendoza Ríos (supervisor)</span>
+                  </div>
+                  <span class="timeline-duration">Permaneció 22 min en este estado</span>
+                </div>
+              </li>
+
+              <li class="timeline-item item-orange">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-title-row">
+                    <strong>En atención</strong>
+                  </div>
+                  <div class="timeline-details">
+                    <span>31/08/2026 10:12 - Iván Zegarra Pinto (técnico)</span>
+                  </div>
+                  <span class="timeline-duration">Permaneció 5 h 48 min en este estado</span>
+                </div>
+              </li>
+
+              <li class="timeline-item item-gray">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-title-row">
+                    <strong>En espera - repuesto de canaleta</strong>
+                  </div>
+                  <div class="timeline-details">
+                    <span>31/08/2026 16:00 - Iván Zegarra Pinto - retorno estimado 01/09/2026</span>
+                  </div>
+                  <span class="timeline-duration">Permaneció 18 h 30 min en este estado</span>
+                </div>
+              </li>
+
+              <li class="timeline-item item-green">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-title-row">
+                    <strong>Resuelto</strong>
+                  </div>
+                  <div class="timeline-details">
+                    <span>01/09/2026 10:30 - Iván Zegarra Pinto</span>
+                  </div>
+                  <span class="timeline-duration">Permaneció 4 h 42 min en este estado</span>
+                </div>
+              </li>
+
+              <li class="timeline-item item-green">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-title-row">
+                    <strong>Cerrado</strong>
+                  </div>
+                  <div class="timeline-details">
+                    <span>01/09/2026 15:12 - Iván Zegarra Pinto - encuesta enviada al usuario</span>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Columna Lateral: Desglose de Tiempo por Etapa -->
+          <div class="time-breakdown-column">
+            <div class="card">
+              <h3 class="card-title-sm">Tiempo por etapa</h3>
+              
+              <div class="time-stage-list">
+                <div class="stage-row">
+                  <span class="stage-name">Abierto</span>
+                  <div class="stage-bar-container"><div class="bar bar-blue" style="width: 10%;"></div></div>
+                  <span class="stage-time">46 min</span>
+                </div>
+
+                <div class="stage-row">
+                  <span class="stage-name">En atención</span>
+                  <div class="stage-bar-container"><div class="bar bar-orange" style="width: 30%;"></div></div>
+                  <span class="stage-time">5 h 48 min</span>
+                </div>
+
+                <div class="stage-row">
+                  <span class="stage-name">En espera</span>
+                  <div class="stage-bar-container"><div class="bar bar-gray" style="width: 75%;"></div></div>
+                  <span class="stage-time">18 h 30 min</span>
+                </div>
+
+                <div class="stage-row">
+                  <span class="stage-name">Resuelto → cerrado</span>
+                  <div class="stage-bar-container"><div class="bar bar-green" style="width: 25%;"></div></div>
+                  <span class="stage-time">4 h 42 min</span>
+                </div>
+              </div>
+
+              <div class="time-highlight-box">
+                <i class="fa-solid fa-chart-pie"></i>
+                <p>El <strong>61% del tiempo</strong> se consumió esperando el repuesto. El tiempo en espera no cuenta para el tiempo esperado de atención.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="system-footer">
+    <span>Mesa de Ayuda de Servicios del Campus - Universidad de Lima</span>
+    <span>soporte.campus@ulima.edu.pe · anexo 30500 · Términos · Privacidad</span>
+  </footer>
+
+</body>
+</html>
